@@ -463,7 +463,7 @@ FText FSubsystemBrowserUtils::GetWorldDescription(const UWorld* World)
 UClass* FSubsystemBrowserUtils::TryFindClassByName(const FString& ClassName)
 {
 	UClass* ResultClass = nullptr;
-#if UE_VERSION_OLDER_THAN(5, 0, 0)
+#if UE_VERSION_OLDER_THAN(5, 1, 0)
 	if (FPackageName::IsShortPackageName(ClassName))
 	{
 		ResultClass = FindObject<UClass>(ANY_PACKAGE, *ClassName);
